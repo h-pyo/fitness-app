@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr--light: #EEB76B;
+  --clr--light2: #E2703A;
+  --clr--text: #EEEEEE;
+  --clr--text2: #1d1d1d;
+  --clr--error: rgb(212, 51, 51);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: var(--clr--text);
+}
+
+body {
+  margin: 0;
+  background: #27374D;
+  font-family: 'Inter';
+}
+
+/*=============== Nav Section =============*/
+
+header {
+  background:transparent;
+  height: 60px;
+  padding: 5px 5px 0px 3px;
+  margin-bottom: 40px;
+}
+
+.page-title a {
+  color: var(--clr--light2);
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+.page-title a:hover {
+  opacity: 0.8;
+}
+
+.page-title a:active {
+  opacity: 1;
+}
+
+.signup-login a {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: var(--clr--light2);
+  font-size: 1.1rem;
+}
+
+.signup-login a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.8;
+}
+
+.signup-login a:active {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.navbar {
+  display: flex;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signed-in-section {
+  display: flex;
+  align-items: center;
+  color:var(--clr--text);
+}
+
+.signed-in-section a {
+  margin-right: 25px;
+  padding: 5px;
+  background-color: var(--clr--light);
+  border-style: solid;
+  border-color: var(--clr--text2);
+  border-radius: 10px;
+  color: var(--clr--text2);
+  text-decoration: none;  
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.signed-in-section a:hover {
+  opacity: 0.8;
+}
+
+.singed-in-section a:active {
+  opacity: 1;
+}
+
+.user-email {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.logout-button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 8px;
+  border-style: solid;
+}
+
+.logout-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.logout-button:active {
+  opacity: 1;
+}
+
+/*=============== Login/Signup Section =============*/
+
+.login-signup-container {
+  display: grid;
+  place-content: center;
+  margin-top: calc(40vh - 120px);
+  color: var(--clr--text2);
+}
+
+.login-signup-container form {
+  background-color: var(--clr--light);
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  padding: 20px;
+  border-style: solid;
+  border-color: var(--clr--light2)
+}
+
+.login-signup-container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.login-signup-container input {
+  margin: 0 5px 25px 5px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 7px;
+  border-color: var(--clr--text2);
+  border-style: solid;
+  font-size: 1.1rem;
+}
+
+.login-signup-container button {
+  width: 125px;
+  align-self: center;
+  height: 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-color: var(--clr--text2);
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.login-signup-container button:hover {
+  cursor:pointer;
+  opacity: 0.8;
+}
+
+.login-signup-container button:active {
+  opacity: 1;
+}
+
+.login-signup-container .error {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--clr--error);
+  font-weight: bold;
+}
+
+/*================================= Home ===============================*/
+.home {
+  display:grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: 1fr;
+  column-gap: 25px;
+}
+
+.create-workout {
+  background-color: var(--clr--light);
+  border-color:var(--clr--text2);
+  border-style: solid;
+  border-radius: 15px;
+  padding: 20px;
+  margin-right: 25px;
+  color:var(--clr--text2);
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+}
+
+.create-workout h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.create-workout label {
+  font-size: 1.2rem;
+}
+
+.create-workout input {
+  margin-bottom: 5px;
+  width: 175px;
+  height: 25px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.days {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.day-checkbox {
+  display: flex;
+}
+
+.day-checkbox input {
+  width: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.create-workout button {
+  margin-top: 5px;
+  width: 225px;
+  height: 30px;
+  align-self: center;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.create-workout button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.create-workout button:active {
+  opacity: 1;
+}
+
+.create-workout-error {
+  margin-top: 5px;
+  text-align: center;
+  color: var(--clr--error);
+  font-weight: bold;
+}
+
+/*--------------------------------------------*/
+
+.workouts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.day-container {
+  margin-bottom: 45px;
+}
+
+.day-container h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.9rem;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.day-workouts {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+
+/*===================================Workout Info===========================*/
+.workout-info {
+  background-color: var(--clr--light);
+  border-style: solid;
+  border-color: var(--clr--text2);
+  border-radius: 15px;
+  color: var(--clr--text2);
+  font-size: 1.15rem;
+  padding: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+.workout-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-button {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.delete-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.delete-button:active {
+  opacity: 1;
+}
+
+.workout-info h4 {
+  font-size: 1.3rem;
+}
+
+.date-created {
+  font-size: 0.9rem;
+}
