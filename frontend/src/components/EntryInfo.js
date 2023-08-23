@@ -10,7 +10,7 @@ const EntryInfo = ({ entry }) => {
     if (!user) {
       return;
     }
-    const response = await fetch(`/server/journal/${entry._id}`, {
+    const response = await fetch(`https://fitness-app-gjaf.onrender.com/server/journal/${entry._id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`
