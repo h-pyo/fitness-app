@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutContext";
 import { useUserAuthContext } from "../hooks/useUserAuthContext";
 
-//componenets
+//components
 import WorkoutInfo from "../components/WorkoutInfo";
 import AddWorkout from "../components/AddWorkout";
 

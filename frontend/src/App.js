@@ -30,8 +30,7 @@ function App() {
             />
             <Route
               path='/Journal'
-              element={<Journal />}
-              // element={!user ? <Signup /> : <Navigate to="/" />}
+              element={user ? <Journal /> : <Navigate to="/" />}
             />
           </Routes>
         </div>

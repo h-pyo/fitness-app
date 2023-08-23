@@ -13,7 +13,6 @@ const AddWorkout = () => {
   const [error, setError] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
   const { user } = useUserAuthContext();
-  const checkBoxesRef = useRef([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +33,7 @@ const AddWorkout = () => {
       }
     });
     const json = await response.json();
-    console.log(response.ok);
+
     if (!response.ok) {
       setError(json.error);
       setEmptyFields(json.emptyFields);
@@ -108,12 +107,10 @@ const AddWorkout = () => {
         <Checkbox
           id="Tuesday"
           handleClick={(e) => handleClick(e.target)}
-          reset={(element) =>  checkBoxesRef.current.push(element) }
         />
         <Checkbox
           id="Wednesday"
           handleClick={(e) => handleClick(e.target)}
-          reset={(element) =>  checkBoxesRef.current.push(element) }
         />
         <Checkbox
           id="Thursday"

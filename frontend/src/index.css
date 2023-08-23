@@ -8,7 +8,6 @@
 
 :root {
   --clr--light: #EEB76B;
-  --clr--light2: #E2703A;
   --clr--text: #EEEEEE;
   --clr--text2: #1d1d1d;
   --clr--error: rgb(212, 51, 51);
@@ -29,14 +28,17 @@ body {
 /*=============== Nav Section =============*/
 
 header {
-  background:transparent;
-  height: 60px;
+  background-color: #27374D;
+  height: 65px;
   padding: 5px 5px 0px 3px;
-  margin-bottom: 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .page-title a {
-  color: var(--clr--light2);
+  color: var(--clr--light);
   text-decoration: none;
   font-size: 1.35rem;
 }
@@ -195,6 +197,7 @@ header {
 
 /*================================= Home ===============================*/
 .home {
+  margin-top: 120px;
   display:grid;
   grid-template-columns: 1fr 400px;
   grid-template-rows: 1fr;
@@ -222,6 +225,7 @@ header {
 
 .create-workout label {
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .create-workout input {
@@ -272,6 +276,11 @@ header {
   text-align: center;
   color: var(--clr--error);
   font-weight: bold;
+}
+
+.create-workout .error {
+  border-style: solid;
+  border-color: var(--clr--error);
 }
 
 /*--------------------------------------------*/
@@ -339,6 +348,204 @@ header {
   font-size: 1.3rem;
 }
 
+.workout-info p {
+  font-weight: 500;
+}
+
 .date-created {
   font-size: 0.9rem;
+}
+
+/*===============================Journal Section==========================*/
+.journal {
+  display:grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: 1fr;
+  column-gap: 25px;
+  margin-top: 120px;
+}
+
+.journal2 {
+  display: none;
+}
+
+.create-entry {
+  background-color: var(--clr--light);
+  border-color:var(--clr--text2);
+  border-style: solid;
+  border-radius: 15px;
+  padding: 20px;
+  margin-right: 25px;
+  color:var(--clr--text2);
+  display: flex;
+  flex-direction: column;
+  height: 445px;
+}
+
+.create-entry h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.create-entry label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.create-entry input {
+  margin-bottom: 5px;
+  width: 175px;
+  height: 25px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.notes textarea {
+  resize: none;
+  width: 95%;
+  height: 150px;
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.create-entry button {
+  margin-top: 5px;
+  width: 225px;
+  height: 30px;
+  align-self: center;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.create-entry button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.create-entry button:active {
+  opacity: 1;
+}
+
+.create-entry-error {
+  margin-top: 5px;
+  text-align: center;
+  color: var(--clr--error);
+  font-weight: bold;
+}
+
+.create-entry .error {
+  border-style: solid;
+  border-color: var(--clr--error);
+}
+
+/*======================= Entry Info ==============================*/
+
+.entries-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entry-info {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  background-color: var(--clr--light);
+  border-style: solid;
+  border-color: var(--clr--text2);
+  border-radius: 15px;
+  color: var(--clr--text2);
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.entry-info-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.entry-info-header h4 {
+  font-size: 1.5rem;
+}
+
+.notes-text {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+
+  .login-signup-container form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 370px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    background-color: #27374D;
+  }
+
+  .signed-in-section {
+    margin-top: 5px;
+  }
+
+  .signed-in-section a {
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .home {
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .create-workout {
+    width: 375px;
+    margin: 40px 0 10px 0;
+  }
+
+  .journal {
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .entries-graph {
+    width: 100vw;
+    margin: 0 0 0 0;
+    flex-direction: column;
+  }
+
+  .graph-container {
+    margin: 15px 40px 0 0;
+    width: 100%;
+  }
+
+  .entries {
+    margin: 30px 0 20px 0;
+  }
+
+  .entry-info {
+    width: 375px;
+  }
+
+  .create-entry {
+    margin: 50px 0 0 0;
+  }
+
 }

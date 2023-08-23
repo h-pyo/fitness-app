@@ -21,7 +21,6 @@ const Navbar = () => {
 
         <nav>
           {user && (
-
             <div className="signed-in-section">
               <Link to="/journal">Health Journal</Link>
               <div className="user-email">{user.email}</div>
@@ -34,7 +33,6 @@ const Navbar = () => {
               <Link to="/signup">Signup</Link>
             </div>
           )}
-
         </nav>
       </div>
     </header>
