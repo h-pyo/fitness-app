@@ -1,5 +1,5 @@
 const allowedOrigins = [
-  'https://fitness-app-gjaf.onrender.com'
+  'https://harris-fitness.netlify.app/'
 ];
 
 module.exports = allowedOrigins;
