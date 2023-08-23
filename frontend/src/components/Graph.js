@@ -5,6 +5,7 @@ import {
   YAxis,
   Line,
   Tooltip,
+  Legend,
   CartesianGrid
 } from 'recharts';
 import { format } from 'date-fns';
@@ -20,7 +21,8 @@ const Graph = ({ data }) => {
         }} />
         <YAxis axisLine={false} tickLine={false} tick={{stroke: "orange"}} />
         <CartesianGrid opacity={0.1} vertical={false} />
-        <Tooltip />
+        <Tooltip contentStyle={{background: "transparent"}}/>
+        <Legend verticalAlign="top" height = {36} />
         <Line name="Hours of Sleep" type="monotone" dataKey="sleep" stroke="#ff0000" />
         <Line name="Calories(kCal)" type="monotone" dataKey="calories" stroke="#00ff6e" />
         <Line name="Happiness Level" type="monotone" dataKey="happiness" stroke="#00e4fd" />
