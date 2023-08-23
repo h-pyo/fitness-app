@@ -10,7 +10,7 @@ export const useUserSignup = () => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch('/server/user/signup', {
+    const response = await fetch('https://fitness-app-gjaf.onrender.com/server/user/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })  

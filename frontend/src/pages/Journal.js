@@ -14,7 +14,7 @@ const Journal = () => {
 
   useEffect(() => {
     const fetchEntries = async () => {
-      const response = await fetch('/server/journal', {
+      const response = await fetch('https://fitness-app-gjaf.onrender.com/server/journal', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

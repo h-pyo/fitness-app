@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/server/workouts', {
+      const response = await fetch('https://fitness-app-gjaf.onrender.com/server/workouts', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

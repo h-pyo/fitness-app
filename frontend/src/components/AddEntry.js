@@ -22,7 +22,7 @@ const AddEntry = () => {
 
     const entry = { sleep, calories, happiness, notes };
 
-    const response = await fetch('/server/journal', {
+    const response = await fetch('https://fitness-app-gjaf.onrender.com/server/journal', {
       method: 'POST',
       body: JSON.stringify(entry),
       headers: {

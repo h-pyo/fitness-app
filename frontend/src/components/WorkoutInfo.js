@@ -10,7 +10,7 @@ const WorkoutInfo = ({workout}) => {
     if (!user) {
       return;
     }
-    const response = await fetch(`/server/workouts/${workout._id}`, {
+    const response = await fetch(`https://fitness-app-gjaf.onrender.com/server/workouts/${workout._id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`

@@ -24,7 +24,7 @@ const AddWorkout = () => {
 
     const workout = { title, reps, load, days };
 
-    const response = await fetch('/server/workouts', {
+    const response = await fetch('https://fitness-app-gjaf.onrender.com/server/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
