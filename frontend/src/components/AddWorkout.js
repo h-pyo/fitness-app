@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutContext";
 import { useUserAuthContext } from "../hooks/useUserAuthContext";
 
