@@ -126,7 +126,7 @@ const AddWorkout = () => {
         />
         <Checkbox
           id="Sunday"
-          handleClick={(e) => handleClick(e.target.id)}
+          handleClick={(e) => handleClick(e.target)}
         />
       </div>
 
